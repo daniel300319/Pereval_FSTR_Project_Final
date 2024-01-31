@@ -19,7 +19,7 @@ class UserSerializer(serializers.ModelSerializer):
             return instance
 
 
-class CoordsSerializer(serializers.ModelSerializer):
+class CoordSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coord
         fields = ['id', 'latitude', 'longitude', 'height']
@@ -37,16 +37,16 @@ class PerevalSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return Pereval.objects.create(**validated_data)
 
-    class ImagesSerializer(serializers.ModelSerializer):
-        class Meta:
-            model = Image
-            fields = [
-                'id',
-                'date_added',
-                'title',
-                'img',
-                'pereval',
-            ]
+class ImagesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = [
+            'id',
+            'date_added',
+            'title',
+            'img',
+            'pereval',
+        ]
 
-            def create(self, validated_data):
-                return Image.objects.create(**validated_data)
+        def create(self, validated_data):
+            return Image.objects.create(**validated_data)

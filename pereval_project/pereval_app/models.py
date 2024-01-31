@@ -51,4 +51,6 @@ class Image(models.Model):
     img = models.BinaryField()
     pereval = models.ForeignKey(Pereval, on_delete=models.CASCADE)
 
+    class Meta:
+        db_table = 'pereval_images'
 
