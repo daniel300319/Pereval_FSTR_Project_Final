@@ -32,7 +32,7 @@ class Pereval(models.Model):
     title = models.CharField(max_length=255)
     other_titles = models.CharField(max_length=255)
     connect = models.CharField(max_length=255, blank=True)
-    add_time = models.DateTimeField()
+    add_time = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     coord = models.ForeignKey(Coord, on_delete=models.CASCADE)
     winter_level = models.CharField(max_length=10, blank=True)
