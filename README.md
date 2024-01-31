@@ -41,14 +41,10 @@
 | PATCH| submitData/{id}/               | Редактирование существующего перевала                    |
 | GET | submitData/?user__email={email} | Получение списка перевалов от определенного пользователя |
 
-#### Список необходимых библиотек:
+#### Зависимости
 
-Django==5.0.1
-
-django-filter==23.5 
-
-djangorestframework==3.14.0
-
-psycopg2==2.9.9
-
-python-dotenv==1.0.1
+- Django==5.0.1
+- django-filter==23.5
+- djangorestframework==3.14.0
+- psycopg2==2.9.9
+- python-dotenv==1.0.1
