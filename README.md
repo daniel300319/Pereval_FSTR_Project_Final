@@ -44,7 +44,11 @@
 #### Список необходимых библиотек:
 
 Django==5.0.1
+
 django-filter==23.5 
+
 djangorestframework==3.14.0
+
 psycopg2==2.9.9
+
 python-dotenv==1.0.1
